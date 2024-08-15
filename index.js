@@ -42,3 +42,12 @@ app.get("/:username/:id", (req, res) => {
     let htmlStr =`<h1> Welcome to page of @${username}!</h1>`
     res.send(htmlStr);
 })
+
+//  QUERY STRING
+app.get("/search", (req, res) => {
+    let { q } = req.query;
+    if(!q)  {
+        res.send("<h1>Result not found!</h1>")
+    }
+    res.send(`<h1>search result for query: ${q}</h1>`)
+})
