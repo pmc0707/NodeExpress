@@ -18,6 +18,7 @@ app.listen(port, () => {
     res.send(code);
 
 });*/
+/*
 app.get("/", (req, res) => {
     res.send("<h1>Hey! you reach pmc0707 world</h1>");
 })
@@ -33,4 +34,11 @@ app.get("/mango", (req, res) => {
 
 app.get("*", (req, res) => {
     res.send("<h1>ERROR! *_*</h1>");
+})*/
+
+//PATH PARAMETER
+app.get("/:username/:id", (req, res) => {
+    let { username , id } = req.params;
+    let htmlStr =`<h1> Welcome to page of @${username}!</h1>`
+    res.send(htmlStr);
 })
