@@ -9,9 +9,12 @@ app.listen(port, () => {
 
 app.use(( req,res)=>{
     console.log( "request received" );
-    res.send({
-        name :"apple",
-        color:"red"
+    // res.send({
+    //     name :"apple",
+    //     color:"red"
+    //
+    // })
+    let code = "<h1>Hey! this is pmc0707 world</h1>";
+    res.send(code);
 
-    })
 })
